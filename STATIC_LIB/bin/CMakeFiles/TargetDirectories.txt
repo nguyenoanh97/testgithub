@@ -1,0 +1,7 @@
+/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/bin/CMakeFiles/install/strip.dir
+/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/bin/CMakeFiles/install/local.dir
+/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/bin/CMakeFiles/install.dir
+/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/bin/CMakeFiles/list_install_components.dir
+/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/bin/CMakeFiles/rebuild_cache.dir
+/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/bin/CMakeFiles/edit_cache.dir
+/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/bin/CMakeFiles/MAXMIN.dir

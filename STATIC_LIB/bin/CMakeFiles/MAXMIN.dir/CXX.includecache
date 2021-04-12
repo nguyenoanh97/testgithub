@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/func.h
+stdio.h
+-
+
+/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/main.cpp
+stdio.h
+-
+func.h
+/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/func.h
+

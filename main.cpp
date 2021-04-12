@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "func.h"
+
  
 int main()
 {
@@ -7,15 +9,9 @@ int main()
     scanf("%f%f%f", &a, &b, &c);
  
     // Tìm max theo C1
-    float maxValue = a;
- 
-    if(b > maxValue){
-        maxValue = b;
-    }
- 
-    if(c > maxValue){
-        maxValue = c;
-    }
-    printf("max = %f", maxValue);
+    float maxValue = max(a,b,c);
+    float minValue = min(a,b,c);
+
+    printf("max = %f min = %f ", maxValue, minValue);
     return 0;
     }

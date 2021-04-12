@@ -1,0 +1,3 @@
+/home/nguyetgt/Desktop/GitTraining/build/CMakeFiles/rebuild_cache.dir
+/home/nguyetgt/Desktop/GitTraining/build/CMakeFiles/edit_cache.dir
+/home/nguyetgt/Desktop/GitTraining/build/CMakeFiles/oanh.dir

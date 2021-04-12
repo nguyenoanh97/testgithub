@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/oanh.dir/max.cpp.o  -o oanh 
