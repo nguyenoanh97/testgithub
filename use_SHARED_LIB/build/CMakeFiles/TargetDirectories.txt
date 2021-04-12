@@ -1,0 +1,3 @@
+/home/nguyetgt/Desktop/GitTraining/use_SHARED_LIB/build/CMakeFiles/rebuild_cache.dir
+/home/nguyetgt/Desktop/GitTraining/use_SHARED_LIB/build/CMakeFiles/edit_cache.dir
+/home/nguyetgt/Desktop/GitTraining/use_SHARED_LIB/build/CMakeFiles/main.dir

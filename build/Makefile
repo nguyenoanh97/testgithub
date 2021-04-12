@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /home/nguyetgt/Desktop/GitTraining/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -111,44 +157,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named oanh
+# Target rules for targets named MAXMIN
 
 # Build rule for target.
-oanh: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 oanh
-.PHONY : oanh
+MAXMIN: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MAXMIN
+.PHONY : MAXMIN
 
 # fast build rule for target.
-oanh/fast:
-	$(MAKE) -f CMakeFiles/oanh.dir/build.make CMakeFiles/oanh.dir/build
-.PHONY : oanh/fast
+MAXMIN/fast:
+	$(MAKE) -f CMakeFiles/MAXMIN.dir/build.make CMakeFiles/MAXMIN.dir/build
+.PHONY : MAXMIN/fast
 
-max.o: max.cpp.o
+main.o: main.cpp.o
 
-.PHONY : max.o
+.PHONY : main.o
 
 # target to build an object file
-max.cpp.o:
-	$(MAKE) -f CMakeFiles/oanh.dir/build.make CMakeFiles/oanh.dir/max.cpp.o
-.PHONY : max.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/MAXMIN.dir/build.make CMakeFiles/MAXMIN.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-max.i: max.cpp.i
+main.i: main.cpp.i
 
-.PHONY : max.i
+.PHONY : main.i
 
 # target to preprocess a source file
-max.cpp.i:
-	$(MAKE) -f CMakeFiles/oanh.dir/build.make CMakeFiles/oanh.dir/max.cpp.i
-.PHONY : max.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/MAXMIN.dir/build.make CMakeFiles/MAXMIN.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-max.s: max.cpp.s
+main.s: main.cpp.s
 
-.PHONY : max.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-max.cpp.s:
-	$(MAKE) -f CMakeFiles/oanh.dir/build.make CMakeFiles/oanh.dir/max.cpp.s
-.PHONY : max.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/MAXMIN.dir/build.make CMakeFiles/MAXMIN.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -156,12 +202,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... oanh"
-	@echo "... max.o"
-	@echo "... max.i"
-	@echo "... max.s"
+	@echo "... MAXMIN"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

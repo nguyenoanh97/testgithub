@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/main.dir/main.cpp.o  -o main   -L/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/build  -Wl,-rpath,/home/nguyetgt/Desktop/GitTraining/STATIC_LIB/build -lMAXMIN 

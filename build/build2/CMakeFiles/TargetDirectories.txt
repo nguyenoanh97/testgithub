@@ -1,3 +1,7 @@
+/home/nguyetgt/Desktop/GitTraining/build/build2/CMakeFiles/install/strip.dir
+/home/nguyetgt/Desktop/GitTraining/build/build2/CMakeFiles/install/local.dir
+/home/nguyetgt/Desktop/GitTraining/build/build2/CMakeFiles/install.dir
+/home/nguyetgt/Desktop/GitTraining/build/build2/CMakeFiles/list_install_components.dir
 /home/nguyetgt/Desktop/GitTraining/build/build2/CMakeFiles/rebuild_cache.dir
 /home/nguyetgt/Desktop/GitTraining/build/build2/CMakeFiles/edit_cache.dir
-/home/nguyetgt/Desktop/GitTraining/build/build2/CMakeFiles/oanh_exe.dir
+/home/nguyetgt/Desktop/GitTraining/build/build2/CMakeFiles/MAXMIN.dir

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMAXMIN.a  CMakeFiles/MAXMIN.dir/func.cpp.o
+/usr/bin/ranlib libMAXMIN.a

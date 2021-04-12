@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /home/nguyetgt/Desktop/GitTraining/build/build2
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -111,44 +157,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named oanh_exe
+# Target rules for targets named MAXMIN
 
 # Build rule for target.
-oanh_exe: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 oanh_exe
-.PHONY : oanh_exe
+MAXMIN: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MAXMIN
+.PHONY : MAXMIN
 
 # fast build rule for target.
-oanh_exe/fast:
-	$(MAKE) -f CMakeFiles/oanh_exe.dir/build.make CMakeFiles/oanh_exe.dir/build
-.PHONY : oanh_exe/fast
-
-func.o: func.cpp.o
-
-.PHONY : func.o
-
-# target to build an object file
-func.cpp.o:
-	$(MAKE) -f CMakeFiles/oanh_exe.dir/build.make CMakeFiles/oanh_exe.dir/func.cpp.o
-.PHONY : func.cpp.o
-
-func.i: func.cpp.i
-
-.PHONY : func.i
-
-# target to preprocess a source file
-func.cpp.i:
-	$(MAKE) -f CMakeFiles/oanh_exe.dir/build.make CMakeFiles/oanh_exe.dir/func.cpp.i
-.PHONY : func.cpp.i
-
-func.s: func.cpp.s
-
-.PHONY : func.s
-
-# target to generate assembly for a file
-func.cpp.s:
-	$(MAKE) -f CMakeFiles/oanh_exe.dir/build.make CMakeFiles/oanh_exe.dir/func.cpp.s
-.PHONY : func.cpp.s
+MAXMIN/fast:
+	$(MAKE) -f CMakeFiles/MAXMIN.dir/build.make CMakeFiles/MAXMIN.dir/build
+.PHONY : MAXMIN/fast
 
 main.o: main.cpp.o
 
@@ -156,7 +175,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/oanh_exe.dir/build.make CMakeFiles/oanh_exe.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/MAXMIN.dir/build.make CMakeFiles/MAXMIN.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -165,7 +184,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/oanh_exe.dir/build.make CMakeFiles/oanh_exe.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/MAXMIN.dir/build.make CMakeFiles/MAXMIN.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,7 +193,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/oanh_exe.dir/build.make CMakeFiles/oanh_exe.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/MAXMIN.dir/build.make CMakeFiles/MAXMIN.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -183,12 +202,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... oanh_exe"
-	@echo "... func.o"
-	@echo "... func.i"
-	@echo "... func.s"
+	@echo "... MAXMIN"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
